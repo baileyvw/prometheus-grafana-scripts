@@ -34,6 +34,17 @@ Restart=on-abort
 WantedBy=multi-user.target
 EOF
 
+cat >> /usr/local/bin/prometheus/prometheus.yml << EOF
+
+  - job_name: 'azure machines'
+    file_sd_configs:
+      - files:
+          - /usr/local/bin/prometheus/target_hosts.yml
+EOF
+
+touch /usr/local/bin/prometheus/target_hosts.yml
+chown promusr:promusr /usr/local/bin/prometheus/target_hosts.yml
+
 systemctl daemon-reload
 systemctl enable prometheus
 systemctl start prometheus
