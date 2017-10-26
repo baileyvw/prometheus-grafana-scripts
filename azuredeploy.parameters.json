@@ -3,25 +3,19 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "admin"
+      "value": "azureuser"
     },
     "adminPassword": {
-      "value": "secret"
+      "value": "You define a PWD"
     },
     "vmName": {
-      "value": "AdobeCentOS543"
+      "value": "prometheusvm"
     },
     "dnsLabelPrefix": {
-      "value": "dnsadobe543"
+      "value": "dnsprometheus"
     },
     "vmSize": {
-      "value": "Standard_DS4_V2"
-    },
-    "fileUris": {
-      "value": "https://mybash.blob.core.windows.net/myscripts/prometheus_setup.sh"
-    },
-    "commandToExecute" : {
-      "value": "sh prometheus_setup.sh"
+      "value": "Standard_DS2"
     }
   }
 }
