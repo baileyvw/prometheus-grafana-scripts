@@ -1,0 +1,27 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "admin"
+    },
+    "adminPassword": {
+      "value": "secret"
+    },
+    "vmName": {
+      "value": "AdobeCentOS543"
+    },
+    "dnsLabelPrefix": {
+      "value": "dnsadobe543"
+    },
+    "vmSize": {
+      "value": "Standard_DS4_V2"
+    },
+    "fileUris": {
+      "value": "https://mybash.blob.core.windows.net/myscripts/prometheus_setup.sh"
+    },
+    "commandToExecute" : {
+      "value": "sh prometheus_setup.sh"
+    }
+  }
+}
